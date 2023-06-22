@@ -13,6 +13,7 @@ class PersonRepositoryImplementation implements PersonRepository{
   @override
   Future<Person> fetchEntity() async {
 
+    // TODO handle Exception
     var json = await _remoteDataSource.getRandomEntity();
     var list = [];
     json['results'].forEach((s) {
